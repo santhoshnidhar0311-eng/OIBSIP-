@@ -1,0 +1,34 @@
+import random
+import string
+
+print("------ Password Creator ------")
+
+
+size = int(input("How long should the password be? : "))
+
+
+opt_lower = input("Use lowercase letters? (y/n): ").strip().lower()
+opt_upper = input("Use uppercase letters? (y/n): ").strip().lower()
+opt_num = input("Use numbers? (y/n): ").strip().lower()
+opt_special = input("Use special symbols? (y/n): ").strip().lower()
+
+
+chars = ""
+
+if opt_lower == "y":
+    chars += string.ascii_lowercase
+if opt_upper == "y":
+    chars += string.ascii_uppercase
+if opt_num == "y":
+    chars += string.digits
+if opt_special == "y":
+    chars += "@#%&*!?"
+
+
+if not chars:
+    print("Please choose at least one character option.")
+else:
+    #
+    pwd = ''.join(random.choice(chars) for _ in range(size))
+
+    print("\nYour Password is: ", pwd)
