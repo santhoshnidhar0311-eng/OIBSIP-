@@ -1,7 +1,7 @@
 import random
 import string
 
-print("------ Password Creator ------")
+print(" Password Creator ")
 
 
 size = int(input("How long should the password be? : "))
@@ -32,3 +32,4 @@ else:
     pwd = ''.join(random.choice(chars) for _ in range(size))
 
     print("\nYour Password is: ", pwd)
+
