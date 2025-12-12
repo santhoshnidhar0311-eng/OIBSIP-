@@ -1,5 +1,5 @@
 def calculate_bmi(weight, height):
-    # Convert height from cm to meters if needed
+    
     if height > 3:  
         height = height / 100
 
@@ -48,3 +48,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
